@@ -6,17 +6,43 @@ const carSchema = new Schema({
         type: String,
         required: true
     },
-    arrivadData: {
+    model: {
+        type: String,
+        required: true
+    },
+    marka: {
+        type: String,
+        required: true
+    },
+    arrivedData: {
         type: Date,
+    },
+    color: {
+        type: String,
+        required: false
     },
     placeNumber: {
         type: Number,
         required: true
     },
-    user: {
-        ref: 'users',
-        type: Schema.Types.ObjectId
+    imageUrl: {
+        type: String,
+        required: false
     },
+    dimensions: { // габариты
+        length: { // длина
+            type: Number,
+            required: true
+        },
+        width: { // ширина
+            type: Number,
+            required: true
+        },
+        height: { // высота
+            type: Number,
+            required: true
+        },
+    }
 })
 
 module.exports = mongoose.model('car', carSchema )

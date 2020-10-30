@@ -5,5 +5,5 @@ const controller = require('../controllers/auth')
 
 
 routes.post('/register', controller.register)
-routes.post('/login', routes)
+routes.post('/login', controller.login)
 module.exports = routes
